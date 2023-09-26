@@ -197,3 +197,33 @@ document.querySelector('#btn-equal').addEventListener('click', () => addSymbol('
 
 document.querySelector('#btn-c').addEventListener('click', () => addSymbol('C'));
 document.querySelector('#btn-ac').addEventListener('click', () => addSymbol('AC'));
+
+
+window.addEventListener('keydown', (event) => {
+    switch (event.key) {
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case '0':
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+        case '.':
+        case '=':
+            addSymbol(event.key);
+            break;
+        case 'a':
+            addSymbol('AC');
+            break;
+        case 'c':
+            addSymbol('C');
+            break;
+    }
+});
